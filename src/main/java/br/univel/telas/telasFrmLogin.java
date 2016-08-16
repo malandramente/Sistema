@@ -41,7 +41,7 @@ public class telasFrmLogin extends JFrame {
 	 * Create the frame.
 	 */
 	public telasFrmLogin() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema\\icons\\Lock 2-52.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Lock 2-52.png"));
 		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 292, 127);

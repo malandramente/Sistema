@@ -54,7 +54,7 @@ public class telasFrmRegisterEditing extends JFrame {
 	 * Create the frame.
 	 */
 	public telasFrmRegisterEditing() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema\\icons\\Gg-48.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -94,7 +94,7 @@ public class telasFrmRegisterEditing extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		ImageIcon iconDelete = new ImageIcon("C:\\JavaDOC\\Sistema\\icons\\Delete-52.png");
+		ImageIcon iconDelete = new ImageIcon("C:\\JavaDOC\\Sistema2016\\icons\\Delete-52.png");
 		Image imgDelete = iconDelete.getImage();
 		BufferedImage biDelete = new BufferedImage(imgDelete.getWidth(null), 
 				imgDelete.getHeight(null), BufferedImage.TYPE_INT_ARGB);
@@ -108,7 +108,7 @@ public class telasFrmRegisterEditing extends JFrame {
 		btnAdd.setBounds(390, 4, 40, 23);
 		panel_1.add(btnAdd);
 		
-		ImageIcon iconEdit = new ImageIcon("C:/JavaDOC/Sistema/icons/Edit-52.png");
+		ImageIcon iconEdit = new ImageIcon("C:/JavaDOC/Sistema2016/icons/Edit-52.png");
 		Image imgEdit = iconEdit.getImage();
 		BufferedImage biEdit = new BufferedImage(imgEdit.getWidth(null), 
 				imgEdit.getHeight(null), BufferedImage.TYPE_INT_ARGB);

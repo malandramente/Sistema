@@ -42,7 +42,7 @@ public class telasFrmEditCount extends JFrame {
 	 * Create the frame.
 	 */
 	public telasFrmEditCount() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema\\icons\\Gg-48.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

@@ -50,7 +50,7 @@ public class telasFrmMain extends JFrame {
 	 * Create the frame.
 	 */
 	public telasFrmMain() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema\\icons\\Gg-48.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 264);

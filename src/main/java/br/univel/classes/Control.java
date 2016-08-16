@@ -15,7 +15,7 @@ public class Control {
 	Calendar calendario = Calendar.getInstance(new Locale("pt-br"));
 	
 	public ImageIcon iconMain(){
-		ImageIcon icon = new ImageIcon("C:\\JavaDOC\\Sistema\\icons\\Coins-48.png");
+		ImageIcon icon = new ImageIcon("C:\\JavaDOC\\Sistema2016\\icons\\Coins-48.png");
 		return icon;
 	}
 	 
