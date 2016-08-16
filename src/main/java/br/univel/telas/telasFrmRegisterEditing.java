@@ -93,7 +93,7 @@ public class telasFrmRegisterEditing extends JFrame {
 		panel_1.setBounds(0, 230, 434, 31);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
-		
+		//
 		ImageIcon iconDelete = new ImageIcon("C:\\JavaDOC\\Sistema2016\\icons\\Delete-52.png");
 		Image imgDelete = iconDelete.getImage();
 		BufferedImage biDelete = new BufferedImage(imgDelete.getWidth(null), 
