@@ -19,7 +19,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.FlowLayout;
 
-public class telasFrmWithdraw extends JFrame {
+public class telasFrmSaqueCliente extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtValue;
@@ -31,7 +31,7 @@ public class telasFrmWithdraw extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmWithdraw frame = new telasFrmWithdraw();
+					telasFrmSaqueCliente frame = new telasFrmSaqueCliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +43,7 @@ public class telasFrmWithdraw extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmWithdraw() {
+	public telasFrmSaqueCliente() {
 		setTitle("Banco TADS");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

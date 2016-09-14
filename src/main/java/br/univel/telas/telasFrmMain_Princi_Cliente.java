@@ -23,7 +23,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class telasFrmMain extends JFrame {
+public class telasFrmMain_Princi_Cliente extends JFrame {
 
 	private JPanel contentPane;
 
@@ -34,7 +34,7 @@ public class telasFrmMain extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmMain frame = new telasFrmMain();
+					telasFrmMain_Princi_Cliente frame = new telasFrmMain_Princi_Cliente();
 					frame.setVisible(true);
 					
 				} catch (Exception e) {
@@ -49,7 +49,7 @@ public class telasFrmMain extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmMain() {
+	public telasFrmMain_Princi_Cliente() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
