@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Toolkit;
 
-public class telasFrmEditCount extends JFrame {
+public class telasFrmEditAgencias extends JFrame {
 
 	private JPanel contentPane;
 
@@ -26,7 +26,7 @@ public class telasFrmEditCount extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmEditCount frame = new telasFrmEditCount();
+					telasFrmEditAgencias frame = new telasFrmEditAgencias();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class telasFrmEditCount extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmEditCount() {
+	public telasFrmEditAgencias() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

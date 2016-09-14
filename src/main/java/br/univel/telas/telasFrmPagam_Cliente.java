@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 import br.univel.classes.Control;
 import java.awt.Toolkit;
 
-public class telasFrmNewAgency extends JFrame {
+public class telasFrmPagam_Cliente extends JFrame {
 
 	private JPanel contentPane;
 
@@ -26,7 +26,7 @@ public class telasFrmNewAgency extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmNewAgency frame = new telasFrmNewAgency();
+					telasFrmPagam_Cliente frame = new telasFrmPagam_Cliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,11 +37,10 @@ public class telasFrmNewAgency extends JFrame {
 	Control c = new Control();
 	private JTextField txtNome;
 	private JTextField txtNumero;
-	private JTextField txtCidade;
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmNewAgency() {
+	public telasFrmPagam_Cliente() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -82,40 +81,43 @@ public class telasFrmNewAgency extends JFrame {
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Nome:");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel.setBounds(100, 11, 63, 22);
+		JLabel lblNewLabel = new JLabel("C\u00F3digo de barras");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNewLabel.setBounds(35, 41, 146, 22);
 		panel_1.add(lblNewLabel);
 		
-		JLabel lblNmero = new JLabel("N\u00FAmero:");
-		lblNmero.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNmero.setBounds(100, 56, 86, 22);
+		JLabel lblNmero = new JLabel("Valor a ser pago");
+		lblNmero.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblNmero.setBounds(35, 89, 181, 22);
 		panel_1.add(lblNmero);
 		
-		JLabel lblCidade = new JLabel("Cidade:");
-		lblCidade.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblCidade.setBounds(100, 100, 74, 22);
-		panel_1.add(lblCidade);
-		
 		txtNome = new JTextField();
-		txtNome.setBounds(100, 33, 238, 20);
+		txtNome.setBounds(35, 68, 238, 20);
 		panel_1.add(txtNome);
 		txtNome.setColumns(10);
 		
 		txtNumero = new JTextField();
 		txtNumero.setColumns(10);
-		txtNumero.setBounds(100, 78, 238, 20);
+		txtNumero.setBounds(35, 111, 238, 20);
 		panel_1.add(txtNumero);
 		
-		txtCidade = new JTextField();
-		txtCidade.setColumns(10);
-		txtCidade.setBounds(100, 122, 238, 20);
-		panel_1.add(txtCidade);
-		
 		JButton btnConfirme = new JButton("Confirme");
-		btnConfirme.setBounds(249, 153, 89, 23);
+		btnConfirme.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnConfirme.setForeground(Color.BLACK);
+		btnConfirme.setBounds(282, 110, 132, 23);
 		panel_1.add(btnConfirme);
+		
+		JLabel lbltipoConta = new JLabel("$Tipo Conta : 00000-00");
+		lbltipoConta.setBounds(295, 27, 127, 14);
+		panel.add(lbltipoConta);
+		
+		JLabel lblAgencia = new JLabel("AG: 0000-00");
+		lblAgencia.setBounds(295, 14, 102, 14);
+		panel.add(lblAgencia);
+		
+		JLabel lblsaldo = new JLabel("Saldo: R$ 0,00");
+		lblsaldo.setBounds(295, 42, 113, 14);
+		panel.add(lblsaldo);
 
 	}
-
 }
