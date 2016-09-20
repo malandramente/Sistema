@@ -51,7 +51,7 @@ public class telasFrmSenhaCliente extends JFrame {
 		setTitle("Banco TADS");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 501, 202);
+		setBounds(100, 100, 501, 183);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -94,7 +94,7 @@ public class telasFrmSenhaCliente extends JFrame {
 		contentPane.add(btnConfirme);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(266, 73, 227, 91);
+		panel_1.setBounds(266, 73, 227, 83);
 		contentPane.add(panel_1);
 		GridBagLayout gbl_panel_1 = new GridBagLayout();
 		gbl_panel_1.columnWidths = new int[]{0, 0, 0, 0, 0, 0};
