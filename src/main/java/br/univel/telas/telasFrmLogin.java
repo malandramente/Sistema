@@ -16,6 +16,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class telasFrmLogin extends JFrame {
 
@@ -98,6 +100,11 @@ public class telasFrmLogin extends JFrame {
 		contentPane.add(txtPassword, gbc_txtPassword);
 		
 		btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		GridBagConstraints gbc_btnLogin = new GridBagConstraints();
 		gbc_btnLogin.insets = new Insets(0, 0, 5, 0);
 		gbc_btnLogin.gridx = 0;
