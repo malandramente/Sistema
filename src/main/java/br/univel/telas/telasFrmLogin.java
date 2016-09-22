@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Dao.Conecao;
+
 import java.awt.GridBagLayout;
 import javax.swing.JTextField;
 import java.awt.GridBagConstraints;
@@ -14,9 +17,14 @@ import javax.swing.JButton;
 import java.awt.Toolkit;
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 
 public class telasFrmLogin extends JFrame {
@@ -102,7 +110,19 @@ public class telasFrmLogin extends JFrame {
 		btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+			//SELECT coluna1, coluna2 FROM `tabela` WHERE coluna2 ="dados" GROUP BY(coluna1);
+				Connection conn = Conecao.abrirConecao();
+			try {
+					PreparedStatement user = conn.prepareStatement("SELECT usuario FROM cadastroCliente "
+							+ "WHERE CPF = 000.000");
+					PreparedStatement pass = conn.prepareStatement("SELECT senhaAcesso FROM cadastroCliente "
+							+ "WHERE CPF = 000.000");
+			
+			} catch (SQLException e1) {
+				JOptionPane.showMessageDialog(rootPane, "Erro na insercao");
+				e1.printStackTrace();
+			}
+			
 			}
 		});
 		GridBagConstraints gbc_btnLogin = new GridBagConstraints();
