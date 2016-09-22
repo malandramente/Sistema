@@ -24,7 +24,9 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 public class telasFrmLogin extends JFrame {
@@ -110,20 +112,30 @@ public class telasFrmLogin extends JFrame {
 		btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-
+				telasFrmPrincipalCliente formPC = new telasFrmPrincipalCliente();
+				telasFrmLogin formL = new telasFrmLogin();
 				Connection conn = Conecao.abrirConecao();
 			try {
-					PreparedStatement user = conn.prepareStatement("SELECT usuario FROM cadastroCliente "
-							+ "WHERE CPF = 000.000");
-					PreparedStatement pass = conn.prepareStatement("SELECT senhaAcesso FROM cadastroCliente "
-							+ "WHERE CPF = 000.000");
+					Statement stm = conn.createStatement();
+					String SQL = "SELECT usuario, senhaAcesso FROM cadastroCliente WHERE usuario ='"+txtUsername.getText()+"';";
+					ResultSet rs = stm.executeQuery(SQL);
+					
+					while (rs.next()) {
+						String login = rs.getString("usuario");
+						String senha = rs.getString("senhaAcesso");
+						if(txtUsername.getText().equals(login) && txtPassword.getText().equals(senha)) {
+							JOptionPane.showMessageDialog(null, "Seja bem vindo: "+login);
+							formPC.show(true);
+							dispose();
+						}else{
+	                        JOptionPane.showMessageDialog(null,"Login ou Senha inválidos.");
+	                        txtPassword.setText("");
+	                    }
+					}
 			} catch (SQLException e1) {
 				JOptionPane.showMessageDialog(rootPane, "Erro na insercao");
 				e1.printStackTrace();
 			}
-			
-			String usuario = txtUsername.getText();
-			String password = txtPassword.getText();
 			
 			}
 		});
