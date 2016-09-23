@@ -127,60 +127,37 @@ public class telasFrmPrincipalCliente extends JFrame {
 		
 		JPanel panel_1 = new JPanel();
 		scrollPane.setViewportView(panel_1);
-		GridBagLayout gbl_panel_1 = new GridBagLayout();
-		gbl_panel_1.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gbl_panel_1.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0};
-		gbl_panel_1.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		panel_1.setLayout(gbl_panel_1);
+		panel_1.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Saques");
+		btnNewButton.setBounds(20, 16, 161, 47);
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnNewButton.setForeground(Color.BLACK);
-		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-		gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton.gridx = 1;
-		gbc_btnNewButton.gridy = 1;
-		panel_1.add(btnNewButton, gbc_btnNewButton);
+		panel_1.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Tranfer\u00EAncias");
+		btnNewButton_1.setBounds(246, 16, 161, 47);
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
-		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton_1.gridx = 7;
-		gbc_btnNewButton_1.gridy = 1;
-		panel_1.add(btnNewButton_1, gbc_btnNewButton_1);
+		panel_1.add(btnNewButton_1);
 		
 		JButton btnNewButton_4 = new JButton("Saldo");
+		btnNewButton_4.setBounds(20, 79, 161, 47);
 		btnNewButton_4.setFont(new Font("Tahoma", Font.BOLD, 11));
-		GridBagConstraints gbc_btnNewButton_4 = new GridBagConstraints();
-		gbc_btnNewButton_4.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton_4.gridx = 1;
-		gbc_btnNewButton_4.gridy = 3;
-		panel_1.add(btnNewButton_4, gbc_btnNewButton_4);
+		panel_1.add(btnNewButton_4);
 		
 		JButton btnNewButton_2 = new JButton("Pagamentos");
+		btnNewButton_2.setBounds(245, 79, 161, 47);
 		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 11));
-		GridBagConstraints gbc_btnNewButton_2 = new GridBagConstraints();
-		gbc_btnNewButton_2.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton_2.gridx = 7;
-		gbc_btnNewButton_2.gridy = 3;
-		panel_1.add(btnNewButton_2, gbc_btnNewButton_2);
+		panel_1.add(btnNewButton_2);
 		
 		JButton btnNewButton_5 = new JButton("Dep\u00F3sitos");
+		btnNewButton_5.setBounds(21, 146, 161, 47);
 		btnNewButton_5.setFont(new Font("Tahoma", Font.BOLD, 11));
-		GridBagConstraints gbc_btnNewButton_5 = new GridBagConstraints();
-		gbc_btnNewButton_5.insets = new Insets(0, 0, 0, 5);
-		gbc_btnNewButton_5.gridx = 1;
-		gbc_btnNewButton_5.gridy = 5;
-		panel_1.add(btnNewButton_5, gbc_btnNewButton_5);
+		panel_1.add(btnNewButton_5);
 		
 		JButton btnNewButton_3 = new JButton("Finalizar");
+		btnNewButton_3.setBounds(246, 146, 161, 47);
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 11));
-		GridBagConstraints gbc_btnNewButton_3 = new GridBagConstraints();
-		gbc_btnNewButton_3.insets = new Insets(0, 0, 0, 5);
-		gbc_btnNewButton_3.gridx = 7;
-		gbc_btnNewButton_3.gridy = 5;
-		panel_1.add(btnNewButton_3, gbc_btnNewButton_3);
+		panel_1.add(btnNewButton_3);
 	}
 }
