@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 public class Conecao {
 	private static Connection conn;
 	private static final String USUARIO = "root";
-    private static final String SENHA = "univel";
+    private static final String SENHA = "4221";
     private static final String URL = "jdbc:mysql://localhost:3306/BANCO";
     private static final String DRIVER = "com.mysql.jdbc.Driver";
 

@@ -112,38 +112,44 @@ public class telasFrmLogin extends JFrame {
 		btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				telasFrmPrincipalCliente formPC = new telasFrmPrincipalCliente();
-				telasFrmLogin formL = new telasFrmLogin();
-				Connection conn = Conecao.abrirConecao();
-			try {
-					Statement stm = conn.createStatement();
-					String SQL = "SELECT usuario, senhaAcesso FROM cadastroCliente WHERE usuario ='"+txtUsername.getText()+"';";
-					ResultSet rs = stm.executeQuery(SQL);
-					
-					while (rs.next()) {
-						String login = rs.getString("usuario");
-						String senha = rs.getString("senhaAcesso");
-						if(txtUsername.getText().equals(login) && txtPassword.getText().equals(senha)) {
-							JOptionPane.showMessageDialog(null, "Seja bem vindo: "+login);
-							formPC.show(true);
-							dispose();
-						}else{
-	                        JOptionPane.showMessageDialog(null,"Login ou Senha inválidos.");
-	                        txtPassword.setText("");
-	                    }
-					}
-			} catch (SQLException e1) {
-				JOptionPane.showMessageDialog(rootPane, "Erro na insercao");
-				e1.printStackTrace();
-			}
+				
+			login();
 			
 			}
 		});
+		
 		GridBagConstraints gbc_btnLogin = new GridBagConstraints();
 		gbc_btnLogin.insets = new Insets(0, 0, 5, 0);
 		gbc_btnLogin.gridx = 0;
 		gbc_btnLogin.gridy = 5;
 		contentPane.add(btnLogin, gbc_btnLogin);
+	}
+
+	private void login() {
+		telasFrmPrincipalCliente formPC = new telasFrmPrincipalCliente();
+		telasFrmLogin formL = new telasFrmLogin();
+		Connection conn = Conecao.abrirConecao();
+	try {
+			Statement stm = conn.createStatement();
+			String SQL = "SELECT usuario, senhaAcesso FROM cadastroCliente WHERE usuario ='"+txtUsername.getText()+"';";
+			ResultSet rs = stm.executeQuery(SQL);
+			
+			while (rs.next()) {
+				String login = rs.getString("usuario");
+				String senha = rs.getString("senhaAcesso");
+				if(txtUsername.getText().equals(login) && txtPassword.getText().equals(senha)) {
+					JOptionPane.showMessageDialog(null, "Seja bem vindo: "+login);
+					formPC.show(true);
+					dispose();
+				}else{
+                    JOptionPane.showMessageDialog(null,"Login ou Senha inválidos.");
+                    txtPassword.setText("");
+                }
+			}
+	} catch (SQLException e1) {
+		JOptionPane.showMessageDialog(rootPane, "Erro na insercao");
+		e1.printStackTrace();
+	}
 	}
 
 }
