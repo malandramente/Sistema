@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Dao.Conecao;
+import Dao.SQL;
 
 import java.awt.GridBagLayout;
 import javax.swing.JTextField;
@@ -129,9 +130,10 @@ public class telasFrmLogin extends JFrame {
 		telasFrmPrincipalCliente formPC = new telasFrmPrincipalCliente();
 		telasFrmLogin formL = new telasFrmLogin();
 		Connection conn = Conecao.abrirConecao();
+		SQL query = new SQL();
 	try {
 			Statement stm = conn.createStatement();
-			String SQL = "SELECT usuario, senhaAcesso FROM cadastroCliente WHERE usuario ='"+txtUsername.getText()+"';";
+			String SQL =  query.Login()+txtUsername.getText()+"';";
 			ResultSet rs = stm.executeQuery(SQL);
 			
 			while (rs.next()) {
