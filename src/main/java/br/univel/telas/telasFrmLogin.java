@@ -131,7 +131,6 @@ public class telasFrmLogin extends JFrame {
 		telasFrmPrincipalCliente formPC = new telasFrmPrincipalCliente();
 		telasFrmLogin formL = new telasFrmLogin();
 		Connection conn = Conecao.abrirConecao();
-//		SQL query = new SQL();
 		String usuario = txtUsername.getText();
 		String senhaAcesso = txtPassword.getText();
 		LoginDAO query = new LoginDAO();
