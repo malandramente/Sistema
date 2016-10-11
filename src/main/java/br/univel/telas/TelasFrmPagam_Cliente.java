@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 import br.univel.classes.Control;
 import java.awt.Toolkit;
 
-public class telasFrmPagam_Cliente extends JFrame {
+public class TelasFrmPagam_Cliente extends JFrame {
 
 	private JPanel contentPane;
 
@@ -26,7 +26,7 @@ public class telasFrmPagam_Cliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmPagam_Cliente frame = new telasFrmPagam_Cliente();
+					TelasFrmPagam_Cliente frame = new TelasFrmPagam_Cliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class telasFrmPagam_Cliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmPagam_Cliente() {
+	public TelasFrmPagam_Cliente() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -18,12 +18,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.FlowLayout;
-import javax.swing.JRadioButton;
-import javax.swing.JScrollBar;
-import javax.swing.JComboBox;
-import javax.swing.JCheckBox;
 
-public class telasFrmDepositoCliente extends JFrame {
+public class TelasFrmSaqueCliente extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtValue;
@@ -35,7 +31,7 @@ public class telasFrmDepositoCliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmDepositoCliente frame = new telasFrmDepositoCliente();
+					TelasFrmSaqueCliente frame = new TelasFrmSaqueCliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,13 +40,10 @@ public class telasFrmDepositoCliente extends JFrame {
 		});
 	}
 	Control c = new Control();
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmDepositoCliente() {
+	public TelasFrmSaqueCliente() {
 		setTitle("Banco TADS");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,56 +91,46 @@ public class telasFrmDepositoCliente extends JFrame {
 		lblSaldo.setBounds(295, 43, 113, 14);
 		panel.add(lblSaldo);
 		
-		JLabel lblNewLabel = new JLabel("Informe outro valor a ser depositado");
-		lblNewLabel.setBounds(20, 89, 185, 15);
+		JButton btn50 = new JButton("R$ 50,00");
+		btn50.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btn50.setBounds(10, 71, 195, 49);
+		contentPane.add(btn50);
+		
+		JButton btn150 = new JButton("R$ 150,00");
+		btn150.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btn150.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btn150.setBounds(229, 71, 195, 49);
+		contentPane.add(btn150);
+		
+		JButton btn100 = new JButton("R$ 100,00");
+		btn100.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btn100.setBounds(10, 131, 195, 49);
+		contentPane.add(btn100);
+		
+		JButton btn500 = new JButton("R$ 500,00");
+		btn500.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btn500.setBounds(10, 191, 195, 49);
+		contentPane.add(btn500);
+		
+		JButton btn200 = new JButton("R$ 200,00");
+		btn200.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btn200.setBounds(229, 131, 195, 49);
+		contentPane.add(btn200);
+		
+		JLabel lblNewLabel = new JLabel("Informe outro valor");
+		lblNewLabel.setBounds(229, 191, 132, 15);
 		contentPane.add(lblNewLabel);
 		
 		txtValue = new JTextField();
-		txtValue.setBounds(209, 85, 95, 23);
+		txtValue.setBounds(229, 208, 95, 32);
 		contentPane.add(txtValue);
 		txtValue.setColumns(10);
 		
 		JButton btnConfirme = new JButton("Confirme");
-		btnConfirme.setBounds(314, 85, 128, 23);
+		btnConfirme.setBounds(329, 208, 95, 32);
 		contentPane.add(btnConfirme);
-		
-		JLabel lblAg = new JLabel("AG:");
-		lblAg.setBounds(10, 138, 46, 14);
-		contentPane.add(lblAg);
-		
-		textField = new JTextField();
-		textField.setBounds(10, 150, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(106, 150, 86, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
-		
-		JLabel lblConta = new JLabel("Conta:");
-		lblConta.setBounds(106, 138, 46, 14);
-		contentPane.add(lblConta);
-		
-		JLabel lblTipoConta = new JLabel(" Tipo Conta");
-		lblTipoConta.setBounds(10, 175, 70, 14);
-		contentPane.add(lblTipoConta);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(10, 190, 212, 22);
-		contentPane.add(comboBox);
-		
-		JLabel lblTitular = new JLabel("Titular");
-		lblTitular.setBounds(10, 216, 46, 14);
-		contentPane.add(lblTitular);
-		
-		textField_2 = new JTextField();
-		textField_2.setBounds(10, 230, 212, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
-		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("Conta Logada");
-		chckbxNewCheckBox.setBounds(6, 111, 97, 23);
-		contentPane.add(chckbxNewCheckBox);
 	}
 }

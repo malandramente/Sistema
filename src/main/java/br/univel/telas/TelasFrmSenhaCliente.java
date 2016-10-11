@@ -23,7 +23,7 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
-public class telasFrmSenhaCliente extends JFrame {
+public class TelasFrmSenhaCliente extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtValue;
@@ -35,7 +35,7 @@ public class telasFrmSenhaCliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmSenhaCliente frame = new telasFrmSenhaCliente();
+					TelasFrmSenhaCliente frame = new TelasFrmSenhaCliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,7 +47,7 @@ public class telasFrmSenhaCliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmSenhaCliente() {
+	public TelasFrmSenhaCliente() {
 		setTitle("Banco TADS");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -23,7 +23,7 @@ import javax.swing.JScrollBar;
 import javax.swing.JComboBox;
 import javax.swing.JCheckBox;
 
-public class telasFrmTransferenciaCliente extends JFrame {
+public class TelasFrmDepositoCliente extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtValue;
@@ -35,7 +35,7 @@ public class telasFrmTransferenciaCliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmTransferenciaCliente frame = new telasFrmTransferenciaCliente();
+					TelasFrmDepositoCliente frame = new TelasFrmDepositoCliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,7 +50,7 @@ public class telasFrmTransferenciaCliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmTransferenciaCliente() {
+	public TelasFrmDepositoCliente() {
 		setTitle("Banco TADS");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -98,59 +98,56 @@ public class telasFrmTransferenciaCliente extends JFrame {
 		lblSaldo.setBounds(295, 43, 113, 14);
 		panel.add(lblSaldo);
 		
-		JLabel lblNewLabel = new JLabel("Valor");
-		lblNewLabel.setBounds(10, 220, 59, 15);
+		JLabel lblNewLabel = new JLabel("Informe outro valor a ser depositado");
+		lblNewLabel.setBounds(20, 89, 185, 15);
 		contentPane.add(lblNewLabel);
 		
 		txtValue = new JTextField();
-		txtValue.setBounds(10, 239, 248, 23);
+		txtValue.setBounds(209, 85, 95, 23);
 		contentPane.add(txtValue);
 		txtValue.setColumns(10);
 		
 		JButton btnConfirme = new JButton("Confirme");
-		btnConfirme.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnConfirme.setBounds(271, 239, 128, 23);
+		btnConfirme.setBounds(314, 85, 128, 23);
 		contentPane.add(btnConfirme);
 		
 		JLabel lblAg = new JLabel("AG:");
-		lblAg.setBounds(10, 103, 46, 14);
+		lblAg.setBounds(10, 138, 46, 14);
 		contentPane.add(lblAg);
 		
 		textField = new JTextField();
-		textField.setBounds(10, 115, 86, 20);
+		textField.setBounds(10, 150, 86, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(106, 115, 86, 20);
+		textField_1.setBounds(106, 150, 86, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblConta = new JLabel("Conta:");
-		lblConta.setBounds(106, 103, 46, 14);
+		lblConta.setBounds(106, 138, 46, 14);
 		contentPane.add(lblConta);
 		
 		JLabel lblTipoConta = new JLabel(" Tipo Conta");
-		lblTipoConta.setBounds(10, 139, 70, 14);
+		lblTipoConta.setBounds(10, 175, 70, 14);
 		contentPane.add(lblTipoConta);
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(10, 156, 212, 22);
+		comboBox.setBounds(10, 190, 212, 22);
 		contentPane.add(comboBox);
 		
 		JLabel lblTitular = new JLabel("Titular");
-		lblTitular.setBounds(10, 176, 46, 14);
+		lblTitular.setBounds(10, 216, 46, 14);
 		contentPane.add(lblTitular);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(10, 189, 212, 20);
+		textField_2.setBounds(10, 230, 212, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
-		JLabel lblContaDeDestino = new JLabel("Conta De Destino/Cr\u00E9dito");
-		lblContaDeDestino.setForeground(Color.BLUE);
-		lblContaDeDestino.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblContaDeDestino.setBounds(10, 71, 242, 21);
-		contentPane.add(lblContaDeDestino);
+		JCheckBox chckbxNewCheckBox = new JCheckBox("Conta Logada");
+		chckbxNewCheckBox.setBounds(6, 111, 97, 23);
+		contentPane.add(chckbxNewCheckBox);
 	}
 }

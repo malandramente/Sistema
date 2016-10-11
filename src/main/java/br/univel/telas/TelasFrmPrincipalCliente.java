@@ -18,7 +18,7 @@ import java.awt.Insets;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
 
-public class telasFrmPrincipalCliente extends JFrame {
+public class TelasFrmPrincipalCliente extends JFrame {
 
 	private JPanel contentPane;
 
@@ -29,7 +29,7 @@ public class telasFrmPrincipalCliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmPrincipalCliente frame = new telasFrmPrincipalCliente();
+					TelasFrmPrincipalCliente frame = new TelasFrmPrincipalCliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +41,7 @@ public class telasFrmPrincipalCliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmPrincipalCliente() {
+	public TelasFrmPrincipalCliente() {
 		setTitle("Banco TADS");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

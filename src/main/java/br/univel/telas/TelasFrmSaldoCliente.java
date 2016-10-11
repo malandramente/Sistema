@@ -18,7 +18,7 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
-public class telasFrmList_Ag_cadastradas extends JFrame {
+public class TelasFrmSaldoCliente extends JFrame {
 
 	private JPanel contentPane;
 
@@ -29,7 +29,7 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmList_Ag_cadastradas frame = new telasFrmList_Ag_cadastradas();
+					TelasFrmSaldoCliente frame = new TelasFrmSaldoCliente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,14 +47,24 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 	private JTextField textField_6;
 	private JTextField textField_7;
 	private JTextField textField_8;
+	private JButton btnNewButton;
+	private JButton btnNewButton_1;
+	private JButton btnNewButton_2;
+	private JButton btnNewButton_3;
+	private JButton btnNewButton_4;
+	private JButton button;
+	private JButton button_1;
+	private JTextField textField_9;
+	private JTextField textField_10;
+	private JTextField textField_SaldoPeriodo;
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmList_Ag_cadastradas() {
+	public TelasFrmSaldoCliente() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 469, 300);
+		setBounds(100, 100, 633, 352);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -82,12 +92,12 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		panel.add(lblSubTitle);
 		
 		JLabel lblDate = new JLabel();
-		lblDate.setBounds(295, 2, 113, 14);
+		lblDate.setBounds(492, 0, 113, 14);
 		lblDate.setText(c.getDate()+" - "+c.getHour());
 		panel.add(lblDate);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(0, 68, 441, 183);
+		panel_1.setBounds(10, 68, 595, 190);
 		panel.add(panel_1);
 		GridBagLayout gbl_panel_1 = new GridBagLayout();
 		gbl_panel_1.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -96,7 +106,7 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_1.setLayout(gbl_panel_1);
 		
-		JLabel lblNewLabel = new JLabel("Nome");
+		JLabel lblNewLabel = new JLabel("Opercao");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
@@ -105,7 +115,7 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		gbc_lblNewLabel.gridy = 1;
 		panel_1.add(lblNewLabel, gbc_lblNewLabel);
 		
-		JLabel lblNumero = new JLabel("Numero");
+		JLabel lblNumero = new JLabel("Data");
 		lblNumero.setFont(new Font("Tahoma", Font.BOLD, 13));
 		GridBagConstraints gbc_lblNumero = new GridBagConstraints();
 		gbc_lblNumero.insets = new Insets(0, 0, 5, 5);
@@ -113,7 +123,7 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		gbc_lblNumero.gridy = 1;
 		panel_1.add(lblNumero, gbc_lblNumero);
 		
-		JLabel lblCidade = new JLabel("Cidade");
+		JLabel lblCidade = new JLabel("Valor");
 		lblCidade.setFont(new Font("Tahoma", Font.BOLD, 13));
 		GridBagConstraints gbc_lblCidade = new GridBagConstraints();
 		gbc_lblCidade.insets = new Insets(0, 0, 5, 5);
@@ -143,7 +153,7 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		
 		textField_6 = new JTextField();
 		GridBagConstraints gbc_textField_6 = new GridBagConstraints();
-		gbc_textField_6.gridwidth = 2;
+		gbc_textField_6.gridwidth = 3;
 		gbc_textField_6.insets = new Insets(0, 0, 5, 5);
 		gbc_textField_6.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_6.gridx = 9;
@@ -175,7 +185,7 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		textField_7 = new JTextField();
 		textField_7.setText("");
 		GridBagConstraints gbc_textField_7 = new GridBagConstraints();
-		gbc_textField_7.gridwidth = 2;
+		gbc_textField_7.gridwidth = 3;
 		gbc_textField_7.insets = new Insets(0, 0, 5, 5);
 		gbc_textField_7.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_7.gridx = 9;
@@ -209,12 +219,70 @@ public class telasFrmList_Ag_cadastradas extends JFrame {
 		textField_8.setText("");
 		GridBagConstraints gbc_textField_8 = new GridBagConstraints();
 		gbc_textField_8.insets = new Insets(0, 0, 0, 5);
-		gbc_textField_8.gridwidth = 2;
+		gbc_textField_8.gridwidth = 3;
 		gbc_textField_8.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_8.gridx = 9;
 		gbc_textField_8.gridy = 6;
 		panel_1.add(textField_8, gbc_textField_8);
 		textField_8.setColumns(10);
+		
+		btnNewButton = new JButton("|<");
+		btnNewButton.setBounds(0, 281, 49, 23);
+		panel.add(btnNewButton);
+		
+		btnNewButton_1 = new JButton("<<");
+		btnNewButton_1.setBounds(48, 281, 59, 23);
+		panel.add(btnNewButton_1);
+		
+		btnNewButton_2 = new JButton("<");
+		btnNewButton_2.setBounds(103, 281, 49, 23);
+		panel.add(btnNewButton_2);
+		
+		btnNewButton_3 = new JButton("Im");
+		btnNewButton_3.setBounds(475, 281, 49, 23);
+		panel.add(btnNewButton_3);
+		
+		btnNewButton_4 = new JButton(">|");
+		btnNewButton_4.setBounds(427, 281, 49, 23);
+		panel.add(btnNewButton_4);
+		
+		button = new JButton(">>");
+		button.setBounds(377, 281, 53, 23);
+		panel.add(button);
+		
+		button_1 = new JButton(">");
+		button_1.setBounds(330, 281, 49, 23);
+		panel.add(button_1);
+		
+		textField_9 = new JTextField();
+		textField_9.setText("01/09/2016");
+		textField_9.setForeground(new Color(0, 0, 0));
+		textField_9.setBounds(150, 282, 86, 20);
+		panel.add(textField_9);
+		textField_9.setColumns(10);
+		
+		textField_10 = new JTextField();
+		textField_10.setText("19/09/16");
+		textField_10.setBounds(246, 282, 86, 20);
+		panel.add(textField_10);
+		textField_10.setColumns(10);
+		
+		JLabel lblAg = new JLabel("AG: 0000-00");
+		lblAg.setBounds(492, 14, 95, 14);
+		panel.add(lblAg);
+		
+		JLabel lbltipoconta = new JLabel("$TipoConta: 00000-00");
+		lbltipoconta.setBounds(492, 25, 113, 14);
+		panel.add(lbltipoconta);
+		
+		JLabel lblSaldor = new JLabel("Saldo: R$ 0,00");
+		lblSaldor.setBounds(492, 39, 101, 14);
+		panel.add(lblSaldor);
+		
+		textField_SaldoPeriodo = new JTextField();
+		textField_SaldoPeriodo.setBounds(519, 282, 86, 20);
+		panel.add(textField_SaldoPeriodo);
+		textField_SaldoPeriodo.setColumns(10);
 
 	}
 }

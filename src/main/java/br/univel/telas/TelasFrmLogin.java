@@ -30,7 +30,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
-public class telasFrmLogin extends JFrame {
+public class TelasFrmLogin extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtUsername;
@@ -46,7 +46,7 @@ public class telasFrmLogin extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmLogin frame = new telasFrmLogin();
+					TelasFrmLogin frame = new TelasFrmLogin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,7 +58,7 @@ public class telasFrmLogin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmLogin() {
+	public TelasFrmLogin() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Lock 2-52.png"));
 		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -127,8 +127,8 @@ public class telasFrmLogin extends JFrame {
 	}
 
 	private void login() {
-		telasFrmPrincipalCliente formPC = new telasFrmPrincipalCliente();
-		telasFrmLogin formL = new telasFrmLogin();
+		TelasFrmPrincipalCliente formPC = new TelasFrmPrincipalCliente();
+		TelasFrmLogin formL = new TelasFrmLogin();
 		Connection conn = Conecao.abrirConecao();
 		String usuario = txtUsername.getText();
 		String senhaAcesso = txtPassword.getText();

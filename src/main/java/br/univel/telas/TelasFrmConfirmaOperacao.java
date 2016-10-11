@@ -18,11 +18,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.FlowLayout;
+import javax.swing.JScrollPane;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 
-public class telasFrmSaqueCliente extends JFrame {
+public class TelasFrmConfirmaOperacao extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtValue;
 
 	/**
 	 * Launch the application.
@@ -31,7 +34,7 @@ public class telasFrmSaqueCliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmSaqueCliente frame = new telasFrmSaqueCliente();
+					TelasFrmConfirmaOperacao frame = new TelasFrmConfirmaOperacao();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,18 +46,18 @@ public class telasFrmSaqueCliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmSaqueCliente() {
+	public TelasFrmConfirmaOperacao() {
 		setTitle("Banco TADS");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 501, 202);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 434, 60);
+		panel.setBounds(0, 0, 462, 60);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -91,46 +94,29 @@ public class telasFrmSaqueCliente extends JFrame {
 		lblSaldo.setBounds(295, 43, 113, 14);
 		panel.add(lblSaldo);
 		
-		JButton btn50 = new JButton("R$ 50,00");
-		btn50.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btn50.setBounds(10, 71, 195, 49);
-		contentPane.add(btn50);
-		
-		JButton btn150 = new JButton("R$ 150,00");
-		btn150.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btn150.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btn150.setBounds(229, 71, 195, 49);
-		contentPane.add(btn150);
-		
-		JButton btn100 = new JButton("R$ 100,00");
-		btn100.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btn100.setBounds(10, 131, 195, 49);
-		contentPane.add(btn100);
-		
-		JButton btn500 = new JButton("R$ 500,00");
-		btn500.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btn500.setBounds(10, 191, 195, 49);
-		contentPane.add(btn500);
-		
-		JButton btn200 = new JButton("R$ 200,00");
-		btn200.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btn200.setBounds(229, 131, 195, 49);
-		contentPane.add(btn200);
-		
-		JLabel lblNewLabel = new JLabel("Informe outro valor");
-		lblNewLabel.setBounds(229, 191, 132, 15);
+		JLabel lblNewLabel = new JLabel("Realizado com sucesso!!!");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel.setBounds(96, 71, 246, 15);
 		contentPane.add(lblNewLabel);
 		
-		txtValue = new JTextField();
-		txtValue.setBounds(229, 208, 95, 32);
-		contentPane.add(txtValue);
-		txtValue.setColumns(10);
-		
-		JButton btnConfirme = new JButton("Confirme");
-		btnConfirme.setBounds(329, 208, 95, 32);
+		JButton btnConfirme = new JButton("Retornar");
+		btnConfirme.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnConfirme.setBounds(10, 120, 122, 23);
 		contentPane.add(btnConfirme);
+		
+		JLabel lblOperao = new JLabel("Opera\u00E7\u00E3o");
+		lblOperao.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblOperao.setBounds(29, 71, 60, 14);
+		contentPane.add(lblOperao);
+		
+		JLabel lblValorR = new JLabel("Valor: R$");
+		lblValorR.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblValorR.setBounds(29, 96, 68, 14);
+		contentPane.add(lblValorR);
+		
+		JLabel lblValor = new JLabel("Valor");
+		lblValor.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblValor.setBounds(106, 97, 60, 14);
+		contentPane.add(lblValor);
 	}
 }

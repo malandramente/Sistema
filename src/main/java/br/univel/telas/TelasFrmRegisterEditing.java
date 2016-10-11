@@ -29,7 +29,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JTable;
 import java.awt.Toolkit;
 
-public class telasFrmRegisterEditing extends JFrame {
+public class TelasFrmRegisterEditing extends JFrame {
 
 	private JPanel contentPane;
 
@@ -40,7 +40,7 @@ public class telasFrmRegisterEditing extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telasFrmRegisterEditing frame = new telasFrmRegisterEditing();
+					TelasFrmRegisterEditing frame = new TelasFrmRegisterEditing();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -53,7 +53,7 @@ public class telasFrmRegisterEditing extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public telasFrmRegisterEditing() {
+	public TelasFrmRegisterEditing() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\JavaDOC\\Sistema2016\\icons\\Gg-48.png"));
 		setTitle("Banco TADS");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
