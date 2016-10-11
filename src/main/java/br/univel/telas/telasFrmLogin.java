@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Dao.Conecao;
-import Dao.SQL;
 import br.univel.classes.LoginDAO;
 
 import java.awt.GridBagLayout;
