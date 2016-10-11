@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Dao.Conecao;
-import br.univel.classes.LoginDAO;
+import Dao.LoginDAO;
 
 import java.awt.GridBagLayout;
 import javax.swing.JTextField;

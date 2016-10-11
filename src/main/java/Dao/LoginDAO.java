@@ -1,9 +1,7 @@
-package br.univel.classes;
+package Dao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-
-import Dao.ConnectionFactory;
 
 public class LoginDAO {
 
